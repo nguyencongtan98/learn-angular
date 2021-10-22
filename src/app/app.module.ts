@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HelloComponent } from './components/hello/hello.component';
+import { StructuralComponent } from './components/structural/structural.component';
+import { AttributeComponent } from './components/attribute/attribute.component';
+import { ChildComponent } from './components/child/child.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, HelloComponent, StructuralComponent, AttributeComponent, ChildComponent, UserListComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

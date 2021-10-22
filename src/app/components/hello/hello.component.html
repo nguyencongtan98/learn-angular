@@ -1,0 +1,38 @@
+<h3>Component to view</h3>
+<h3>Họ tên : {{ name }}</h3>
+<h3>Tuổi : {{ age }}</h3>
+<h1>{{ count }}</h1>
+
+<img src="{{ imgLink }}" alt="" width="200" height="200" />
+
+<img [src]="imgLink" [width]="imgWidth" height="200" />
+
+<button (click)="showInfo($event)">Show info</button>
+<button (click)="countInccreate()">Count</button>
+
+<div>
+  <label>User Name</label>
+  <input type="text" (keyup)="onKeyUp($event)" />
+  <input type="text" (keyup.enter)="onKeyUpEnter($event)" />
+</div>
+
+<h2>ket qua :{{ userName }}</h2>
+Gender: {{ gender == 1 ? "Male" : "Female" }}
+{{ gender }}
+<div class="form-group">
+  <select class="form-control" [(ngModel)]="gender">
+    <option value="1">Male</option>
+    <option value="2">Female</option>
+  </select>
+</div>
+
+<br />
+<ul class="list-group">
+  <li *ngFor="let item of names" class="list-group-item active">{{ item }}</li>
+</ul>
+
+<ul class="list-group">
+  <li *ngFor="let item of products" class="list-group-item active">
+    {{ item.name }}
+  </li>
+</ul>

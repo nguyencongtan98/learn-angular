@@ -1,0 +1,15 @@
+<h3 [class.pd-10]="true">Chào mừng đến với khóa học Angular</h3>
+
+<!-- Ng class -->
+<h2>NG Class</h2>
+<h3 [ngClass]="['pd-10', 'color-red', 'border-blue']">
+  Chào mừng đến với khóa học Angular
+</h3>
+
+<h3 [ngClass]="{ 'color-red': isSpecial }">
+  Chào mừng đến với khóa học Angular
+</h3>
+
+<button (click)="onToggleSpecial()">OKE TOGGLE</button>
+
+<h2 [ngStyle]="onChangeStyle()">NG STYLE ANGULAR</h2>

@@ -1,0 +1,117 @@
+<!-- <p>structural works!</p>
+
+<h2 *ngIf="isShow">Ho ten:{{ user }}</h2>
+<button (click)="onToggle()">Toggle</button>
+<hr />
+
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="radio" name="rdCheck" (click)="onChange(true)" />
+    OK
+  </label>
+  <label class="form-check-label">
+    <input type="radio" name="rdCheck" (click)="onChange(false)" />
+    NOT OK
+  </label>
+</div>
+<h3 *ngIf="isChecked; else elseBlock">OKE</h3>
+
+<ng-template #elseBlock>
+  <h3>NOT OK</h3>
+</ng-template>
+
+<hr />
+
+{{ age }}
+
+<div class="form-group">
+  <label>AGE</label>
+  <input type="text" class="form-control" [(ngModel)]="age" />
+</div>
+
+<ng-container *ngIf="age > 18; else elseNotEnough"
+  ><h3>Đủ tuổi</h3>
+</ng-container>
+
+<ng-template #elseNotEnough>
+  <h3>Chưa đủ tuổi</h3>
+</ng-template> -->
+
+<!-- ////////////////////////////////////// -->
+<!-- <div class="list-group">
+  <li
+    href="#"
+    class="list-group-item list-group-item-action"
+    *ngFor="let item of names"
+  >
+    {{ item }}
+  </li>
+</div>
+
+<ng-container *ngIf="products.length > 0; else elseNoProducts">
+  <table class="table table-bordered table-inverse table-responsive">
+    <thead class="thead-inverse">
+      <tr>
+        <th>STT</th>
+        <th>name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let item of products;
+          let i = index;
+          let f = first;
+          let e = even;
+          trackBy: myTracbyFunction
+        "
+        [style.background-color]="e ? 'green' : ''"
+      >
+        <td>{{ i + 1 }} {{ f }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }} VND</td>
+      </tr>
+    </tbody>
+  </table></ng-container
+>
+
+<ng-template #elseNoProducts>
+  <h2>No product</h2>
+</ng-template>
+
+<button type="button" class="btn btn-primary" (click)="onLoadData()">
+  Get data
+</button> -->
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of users">
+    <span class="text-danger" *ngIf="user.address === 'VN'"
+      >{{ user.name }} - {{ user.address }}</span
+    >
+    <span class="text-primary" *ngIf="user.address === 'USA'"
+      >{{ user.name }} - {{ user.address }}</span
+    >
+    <span *ngIf="user.address !== 'USA' && user.address !== 'VN'"
+      >{{ user.name }} - {{ user.address }}</span
+    >
+  </li>
+</ul>
+
+<hr />
+<h3>Switch case</h3>
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let user of users"
+    [ngSwitch]="user.address"
+  >
+    <span *ngSwitchCase="'VN'" class="text-danger">
+      {{ user.name }} - {{ user.address }}
+    </span>
+    <span *ngSwitchCase="'USA'" class="text-primary">
+      {{ user.name }} - {{ user.address }}
+    </span>
+    <span *ngSwitchDefault> {{ user.name }} - {{ user.address }} </span>
+  </li>
+</ul>
