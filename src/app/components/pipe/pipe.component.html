@@ -46,9 +46,34 @@
     </tr>
     <tr>
       <td>7</td>
-      <td>Datet</td>
+      <td>Date</td>
       <td>{{ today }}</td>
       <td>{{ today | date: "dd/MM/y hh:mm:ss a" }}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>JSON</td>
+      <td>{{ product }}</td>
+      <td>{{ product | json | uppercase }}</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Custome Pipe</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên Pipe</th>
+      <th>Dữ liệu đầu vào</th>
+      <th>Kết quả hiển thị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Custome pipe</td>
+      <td>{{ content }}</td>
+      <td>{{ content | formatData: 10:20 }}</td>
     </tr>
   </tbody>
 </table>

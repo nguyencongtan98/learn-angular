@@ -18,6 +18,12 @@ export class PipeComponent implements OnInit {
 
   public today: Date = new Date();
 
+  public product: any = {
+    i: 1,
+    name: 'Sam sung',
+    price: 3,
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
