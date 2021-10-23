@@ -13,17 +13,28 @@ export class AppComponent {
     {
       id: 1,
       name: 'Nguyen Cong Tan',
-      address: 'Quang Nam',
+      phone: '24343243243',
     },
     {
       id: 2,
       name: 'Dang Thi Truc Vy',
-      address: 'Hoi An',
+      phone: '432565655',
     },
     {
       id: 3,
       name: 'Nguyen Thi Ngoc Diem',
-      address: 'Ha Noi',
+      phone: '386845348',
     },
   ];
+
+  public txtFullName: string | undefined;
+  public txtPhone: string | undefined;
+
+  onGetFullName(value: string) {
+    this.txtFullName = value;
+  }
+
+  onGetPhone(value: string) {
+    this.txtPhone = value;
+  }
 }

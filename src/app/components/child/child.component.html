@@ -7,5 +7,14 @@
     </p>
     <p class="card-text">AGE :{{ age }}</p>
     <p class="card-text">Name :{{ name }}</p>
+
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" class="form-control" [(ngModel)]="txtFullName" />
+      <input type="text" class="form-control" [(ngModel)]="txtPhone" />
+      <button type="button" class="btn btn-primary" (click)="onSubmitForm()">
+        SEND
+      </button>
+    </div>
   </div>
 </div>

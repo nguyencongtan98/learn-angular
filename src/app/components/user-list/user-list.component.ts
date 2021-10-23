@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
   @Input('users') users: any[] | undefined;
+  @Input('fullName') fullName: string | undefined;
+  @Input('phone') phone: string | undefined;
 
   constructor() {}
 

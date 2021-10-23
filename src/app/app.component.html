@@ -25,6 +25,7 @@
 </div> -->
 
 <div class="container" [style.margin.px]="30">
+  Full Name{{ txtFullName }} Phone{{ txtPhone }}
   <div class="row">
     <div class="row">
       <div class="col-6">
@@ -32,10 +33,16 @@
           [married]="isMarried"
           [age]="age"
           [name]="'Tan Nguyen'"
+          (txtFullName)="onGetFullName($event)"
+          (txtPhone)="onGetPhone($event)"
         ></app-child>
       </div>
       <div class="col-6">
-        <user-list [users]="users"></user-list>
+        <user-list
+          [users]="users"
+          [fullName]="txtFullName"
+          [phone]="txtPhone"
+        ></user-list>
       </div>
     </div>
   </div>
