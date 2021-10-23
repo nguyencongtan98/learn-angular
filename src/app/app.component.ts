@@ -37,4 +37,10 @@ export class AppComponent {
   onGetPhone(value: string) {
     this.txtPhone = value;
   }
+
+  public iShowing: boolean = true;
+
+  onToggle() {
+    this.iShowing = !this.iShowing;
+  }
 }

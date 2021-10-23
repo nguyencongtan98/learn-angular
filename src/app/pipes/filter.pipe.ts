@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import 'lodash';
 
 @Pipe({
   name: 'filter',
@@ -19,6 +20,8 @@ export class FilterPipe implements PipeTransform {
         item.name.toLowerCase().includes(name)
       ));
     }
+
+    
 
     if (status) {
       return (products = products.filter(

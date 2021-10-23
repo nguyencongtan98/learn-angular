@@ -25,8 +25,8 @@
 </div> -->
 
 <div class="container" [style.margin.px]="30">
-  Full Name{{ txtFullName }} Phone{{ txtPhone }}
-  <div class="row">
+  <div style="display: none" class="row">
+    Full Name{{ txtFullName }} Phone{{ txtPhone }}
     <div class="row">
       <div class="col-6">
         <app-child
@@ -48,6 +48,17 @@
     <div class="row">
       <app-pipe></app-pipe>
     </div>
+    <app-custom-pipe></app-custom-pipe>
   </div>
-  <app-custom-pipe></app-custom-pipe>
+
+  <div class="card text-white bg-primary">
+    <img class="card-img-top" src="holder.js/100px180/" alt="" />
+    <div class="card-body">
+      <h4 class="card-title">Lifecycle Hook</h4>
+      <app-lifecycle-hook *ngIf="iShowing"></app-lifecycle-hook>
+      <button type="button" class="btn btn-danger" (click)="onToggle()">
+        TOGGLE
+      </button>
+    </div>
+  </div>
 </div>
