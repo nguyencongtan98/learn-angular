@@ -12,6 +12,10 @@ export class PipeComponent implements OnInit {
   distracted by the readable content of a page when 
   `;
 
+  public title: string = 'Học Angular 4';
+  public amount: number = 35.45465;
+  public percent: number = 0.5688;
+
   constructor() {}
 
   ngOnInit(): void {}

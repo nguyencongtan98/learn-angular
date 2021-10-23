@@ -26,5 +26,23 @@
       <td>{{ content }}</td>
       <td>{{ content | titlecase }}</td>
     </tr>
+    <tr>
+      <td>4</td>
+      <td>Slice</td>
+      <td>{{ title }}</td>
+      <td>{{ title | slice: 4:11 }}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Decimal (number)</td>
+      <td>{{ amount }}</td>
+      <td>{{ amount | number: "1.0-3" }}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Percent</td>
+      <td>{{ percent }}</td>
+      <td>{{ percent | percent }}</td>
+    </tr>
   </tbody>
 </table>
