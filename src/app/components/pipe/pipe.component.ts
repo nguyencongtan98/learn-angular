@@ -16,6 +16,8 @@ export class PipeComponent implements OnInit {
   public amount: number = 35.45465;
   public percent: number = 0.5688;
 
+  public today: Date = new Date();
+
   constructor() {}
 
   ngOnInit(): void {}
