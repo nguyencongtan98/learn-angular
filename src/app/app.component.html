@@ -24,7 +24,7 @@
   </div>
 </div> -->
 
-<div class="container" [style.margin.px]="30">
+<!-- <div class="container" [style.margin.px]="30">
   <div style="display: none" class="row">
     Full Name{{ txtFullName }} Phone{{ txtPhone }}
     <div class="row">
@@ -55,10 +55,43 @@
     <img class="card-img-top" src="holder.js/100px180/" alt="" />
     <div class="card-body">
       <h4 class="card-title">Lifecycle Hook</h4>
-      <app-lifecycle-hook *ngIf="iShowing"></app-lifecycle-hook>
+      <app-lifecycle-hook *ngIf="iShowing" [total]="total"></app-lifecycle-hook>
       <button type="button" class="btn btn-danger" (click)="onToggle()">
         TOGGLE
       </button>
+      <hr />
+      Số thứ 1: <input class="form-control" type="number" [(ngModel)]="a" /> Số
+      thứ 2:<input class="form-control" type="number" [(ngModel)]="b" />
+      <button type="button" class="btn btn-secondary" (click)="amount()">
+        Tính tổng
+      </button>
     </div>
   </div>
-</div>
+</div> -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-first></app-first>
+    </div>
+    <div class="col-6">
+      <app-second></app-second>
+    </div>
+  </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand">Brand</a>
+  <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="my-nav" class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Item 2</a>
+      </li>
+    </ul>
+  </div>
+</nav>

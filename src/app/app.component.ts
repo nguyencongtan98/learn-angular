@@ -39,8 +39,15 @@ export class AppComponent {
   }
 
   public iShowing: boolean = true;
+  public a: number = 0;
+  public b: number = 0;
+  public total: number = 0;
 
   onToggle() {
     this.iShowing = !this.iShowing;
+  }
+  amount() {
+    this.total = this.a + this.b;
+    console.log(this.total);
   }
 }

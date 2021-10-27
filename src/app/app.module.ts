@@ -13,11 +13,29 @@ import { FormatDataPipe } from './pipes/format-data.pipe';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LifecycleHookComponent } from './components/lifecycle-hook/lifecycle-hook.component';
+import { FirstComponent } from './components/first/first.component';
+import { SecondComponent } from './components/second/second.component';
+// Service
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
-  declarations: [AppComponent, HelloComponent, StructuralComponent, AttributeComponent, ChildComponent, UserListComponent, PipeComponent, FormatDataPipe, CustomPipeComponent, FilterPipe, LifecycleHookComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    StructuralComponent,
+    AttributeComponent,
+    ChildComponent,
+    UserListComponent,
+    PipeComponent,
+    FormatDataPipe,
+    CustomPipeComponent,
+    FilterPipe,
+    LifecycleHookComponent,
+    FirstComponent,
+    SecondComponent,
+  ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
